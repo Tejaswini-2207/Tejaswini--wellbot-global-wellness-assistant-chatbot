@@ -1,27 +1,71 @@
 # Tejaswini--wellbot-global-wellness-assistant-chatbot
-Project Overview
+🌿 WellBot – AI-Powered Wellness Assistant
+📌 Project Overview
 
-WellBot combines AI chatbot technology with health analytics tools to help users manage their wellness effectively.
+WellBot is an AI-driven wellness platform that combines chatbot intelligence with health analytics tools to help users manage their physical and mental well-being effectively.
 
-Core Capabilities
+It integrates multiple AI models, health tracking tools, and prescription analysis into a single unified system.
 
+🚀 Core Features
 🤖 AI Wellness Chatbot
+
+Conversational AI for health-related queries
+
+Intelligent responses using multi-model orchestration
 
 📸 Prescription Image Analysis
 
+Upload prescription images
+
+Extracts medicine names
+
+Provides dosage and guidance
+
 🩺 Symptom Checker
+
+Helps users understand possible health conditions
+
+Provides basic medical suggestions
 
 🍎 Nutrition Guidance
 
+Personalized diet suggestions
+
+Detailed nutrient information
+
 📊 Health Monitoring Dashboard
+
+Track daily wellness metrics
+
+Visual insights with charts
 
 🧑‍💻 Admin Monitoring System
 
-🏗 System Architecture User Interface (HTML / CSS / JS) ↓ Frontend Dashboard ↓ Flask Backend API ↓ AI Model Router ↓ Groq | Gemini | Ollama | OpenAI ↓ MongoDB Database
+Manage users and chats
 
-This hybrid AI architecture ensures high reliability and fallback support.
+Monitor system performance
 
-💻 Technologies Used Frontend
+🏗️ System Architecture
+User Interface (HTML/CSS/JS)
+        ↓
+Frontend Dashboard
+        ↓
+Flask Backend API
+        ↓
+AI Model Router
+        ↓
+Groq | Gemini | Ollama | OpenAI
+        ↓
+MongoDB Database
+
+✅ Hybrid AI architecture ensures:
+
+High reliability
+
+Automatic fallback support
+
+💻 Technologies Used
+🎨 Frontend
 
 HTML5
 
@@ -31,13 +75,23 @@ JavaScript (ES6)
 
 Chart.js
 
-Google Fonts (Inter / Poppins)
+Google Fonts (Inter, Poppins)
 
-Frontend Pages:
+📄 Pages
 
-index.html login.html register.html dashboard.html chatbot.html admin_dashboard.html ⚙ Backend
+index.html
 
-Framework:
+login.html
+
+register.html
+
+dashboard.html
+
+chatbot.html
+
+admin_dashboard.html
+
+⚙ Backend
 
 Python
 
@@ -47,7 +101,7 @@ Flask-CORS
 
 Authlib (Google OAuth)
 
-Backend Responsibilities:
+🔧 Responsibilities
 
 API routing
 
@@ -59,23 +113,32 @@ Image processing
 
 Database operations
 
-Main File:
+📌 Main File: app.py
 
-app.py 🧠 AI Models Integrated
+🧠 AI Models Integrated
+Model	Purpose
+Rule-Based AIML	Basic chatbot responses
+Groq (Llama 3.3)	Primary LLM
+Gemini 1.5 Flash	Cloud fallback
+Ollama	Local AI model
+OpenAI GPT-4o Vision	Prescription analysis
+🗄 Database
 
-WellBot uses multi-tier AI orchestration.
+Database: MongoDB
 
-Model Purpose AIML Rule-based chatbot responses Groq (Llama 3.3) Primary LLM Gemini 1.5 Flash Cloud fallback Ollama Local AI model OpenAI GPT-4o Vision Prescription analysis 🗄 Database
+📂 Collections
 
-Database:
+users
 
-MongoDB
+chats
 
-Collections:
+feedback
 
-users chats feedback reported_issues prescriptions
+reported_issues
 
-MongoDB stores:
+prescriptions
+
+📌 Stores
 
 User accounts
 
@@ -87,27 +150,28 @@ Uploaded prescriptions
 
 Issue reports
 
-📦 Required Python Libraries
-
-Install dependencies:
-
+📦 Installation & Setup
+1️⃣ Clone Repository
+git clone https://github.com/yourusername/wellbot.git
+cd wellbot
+2️⃣ Install Dependencies
 pip install -r requirements.txt
+3️⃣ Setup Environment Variables
 
-Main dependencies:
+Create a .env file:
 
-Flask Flask-CORS pymongo python-dotenv authlib requests Pillow groq openai google-generativeai 🔐 Environment Variables
+MONGO_URI=your_mongodb_uri
+OPENAI_API_KEY=your_openai_key
+GROQ_API_KEY=your_groq_key
+GEMINI_API_KEY=your_gemini_key
+4️⃣ Run the Server
+python app.py
 
-Create .env file:
+🌐 Server runs at:
 
-MONGO_URI=your_mongodb_uri OPENAI_API_KEY=your_openai_key GROQ_API_KEY=your_groq_key GEMINI_API_KEY=your_gemini_key 🚀 Installation & Setup 1️⃣ Clone Repository git clone https://github.com/yourusername/wellbot.git cd wellbot 2️⃣ Install Dependencies pip install -r requirements.txt 3️⃣ Start Backend Server python app.py
-
-Server will run at:
-
-http://localhost:5000 👤 User Dashboard Features
-
-User dashboard provides multiple health tools.
-
-Health Tools
+http://localhost:5000
+👤 User Dashboard Features
+🏃 Health Tracking Tools
 
 👣 Step Counter
 
@@ -124,58 +188,34 @@ Health Tools
 🥗 AI Diet Planner
 
 🍎 Nutrition Guide
-
-Includes detailed nutrition information.
-
 Vitamins
 
-Vitamin A
-
-Vitamin B
-
-Vitamin C
-
-Vitamin D
-
-Vitamin E
+Vitamin A, B, C, D, E
 
 Minerals
 
-Iron
+Iron, Zinc, Magnesium, Calcium, Potassium
 
-Zinc
+Protein Sources
 
-Magnesium
+Eggs, Fish, Chicken
 
-Calcium
-
-Potassium
-
-Proteins
-
-Eggs
-
-Fish
-
-Chicken
-
-Lentils
-
-Beans
-
-Tofu
+Lentils, Beans, Tofu
 
 Milk
 
 📸 AI Prescription Analysis
+Workflow
 
-Users can upload a prescription image.
+Upload prescription image
 
-The system:
+Extract medicine details
 
-1️⃣ Reads prescription image 2️⃣ Extracts medicine names 3️⃣ Shows dosage instructions 4️⃣ Provides medical guidance
+Identify dosage
 
-Supported vision models:
+Provide medical guidance
+
+Supported Models
 
 OpenAI Vision
 
@@ -184,10 +224,7 @@ Gemini Vision
 Ollama Vision
 
 🧑‍💻 Admin Dashboard
-
-Admin dashboard provides system monitoring tools.
-
-Admin Capabilities
+Features
 
 👥 User Management
 
@@ -201,37 +238,31 @@ Admin Capabilities
 
 🛡 System Health Monitor
 
-🛡 Security Features
+🔐 Security Features
 
 SHA-256 password hashing
 
 Token-based authentication
 
-Secure .env API keys
+Secure API keys (.env)
 
 Crisis message detection
 
 Protected admin routes
 
-🌍 Accessibility Features Multi-Language Support
+🌍 Accessibility
 
 English
 
-Hindi
+🎨 Themes
 
-Kannada
+Light Mode
 
-Spanish
-
-Theme System
-
-Light Theme
-
-Dark Theme
+Dark Mode
 
 📊 System Monitoring
 
-Admin dashboard tracks:
+Tracks:
 
 Active users
 
@@ -243,21 +274,21 @@ Chat statistics
 
 🎯 Project Goal
 
-WellBot aims to provide AI-powered healthcare assistance that improves accessibility and understanding of health information.
+To provide accessible, AI-powered healthcare assistance that improves understanding and promotes better health decisions.
 
 🏁 Conclusion
 
-WellBot demonstrates how AI technology can enhance digital healthcare systems by integrating:
+WellBot demonstrates how modern AI can enhance healthcare by combining:
 
-AI chatbots
+Intelligent chatbots
 
 Prescription analysis
 
 Wellness tracking
 
-Intelligent admin monitoring
+Admin monitoring systems
 
-⭐ WellBot makes healthcare assistance faster, smarter, and accessible for everyone.
+✨ Making healthcare faster, smarter, and accessible for everyone.
 
 👥 Contributors
 
@@ -272,3 +303,4 @@ Sakshi
 Harika
 
 Apeksha
+
